@@ -1,1 +1,38 @@
 /* você pode estilizar se quiser !!! */
+body{
+    background-color: rgb(255, 254, 240);
+}
+body h1{
+
+    text-align: center;
+    min-width: 400px;
+
+}
+#container-resultados{
+    padding: 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    width: 100%;
+    min-width: 400px;
+    background-color: rgb(255, 255, 226);
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px 1px;
+}
+#container-resultados h2{
+    margin: 10px 10px;
+    width: 100%;
+}
+
+.container-kata{
+    padding: 20px;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.726);
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px 1px inset rgb(143, 143, 143);
+    margin-bottom: 50px;
+}
