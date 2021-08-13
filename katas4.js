@@ -4,148 +4,171 @@ const lotrCitiesArray = ["Mordor","Gondor","Rohan","Beleriand","Mirkwood","Dead 
 
 const bestThing = "The best thing about a boolean is even if you are wrong you are only off by a bit";
 
-function mostraNaPagina(nomeKata, lista){
+function showResults(nomeKata, lista){
 
-    let title = document.createElement("h2");
-    let newDiv = document.createElement("div");
     let container = document.getElementById('container-resultados');
+    let newtitle = document.createElement("h2");
+    newtitle.innerText = nomeKata;
+    let newP = document.createElement("p");
+    newP.classList.add('container-kata');
+    newP.textContent = JSON.stringify(lista);
     
-    title.textContent = nomeKata;
-    newDiv.classList.add('container-kata');
-    newDiv.textContent = JSON.stringify(lista);
-    container.appendChild(title)
-    container.appendChild(newDiv)
+    container.appendChild(newtitle)
+    container.appendChild(newP)
 
 }
 
 // kata1();
 function kata1() {
     let arr = gotCitiesCSV.split(',')
-    mostraNaPagina('kata1 :', arr)
+    showResults("kata1 :", arr)
     return arr
 }
+
 
 // daqui em diante é contigo
 function kata2() {
     let arr = bestThing.split(' ')
-    mostraNaPagina('kata2 :', arr)
+    showResults('kata2 :', arr)
     return arr
 }
 
 function kata3() {
     let arr = gotCitiesCSV.split(',').join(';')
-    mostraNaPagina('kata3 :', arr)
+    showResults('kata3 :', arr)
     return arr
 }
 
 function kata4() {
     let string = lotrCitiesArray.join(';')
-    mostraNaPagina('kata4 :', string)
+    showResults('kata4 :', string)
     return string
 }
 
 function kata5() {
     let arr = lotrCitiesArray.slice(0, 5)
-    mostraNaPagina('kata5 :', arr)
+    showResults('kata5 :', arr)
     return arr
 }
 
 function kata6() {
     let arr = lotrCitiesArray.slice(-5)
-    mostraNaPagina('kata6 :', arr)
+    showResults('kata6 :', arr)
     return arr
 }
 
 function kata7() {
     let arr = lotrCitiesArray.slice(2, 5);
-    mostraNaPagina('kata7 :', arr);
+    showResults('kata7 :', arr);
     return arr
 }
 
 function kata8() {
     let arr = lotrCitiesArray;
     arr.splice(2,1);
-    mostraNaPagina('kata8 :', arr)
+    showResults('kata8 :', arr)
     return arr
 }
 
 function kata9() {
     let arr = lotrCitiesArray;
     arr.splice((lotrCitiesArray.length)-2, Number.MAX_VALUE)
-    mostraNaPagina('kata9 :', arr)
+    showResults('kata9 :', arr)
     return arr
 }
 
 function kata10() {
     let arr = lotrCitiesArray;
     arr.splice(2, 0, 'Rohan')
-    mostraNaPagina('kata10 :', arr)
+    showResults('kata10 :', arr)
     return arr
 }
 
 function kata11() {
     let arr = lotrCitiesArray;
     arr.splice(lotrCitiesArray.length-1, 1, 'Deadest Marshes')
-    mostraNaPagina('kata11 :', arr)
+    showResults('kata11 :', arr)
     return arr
 }
 
 function kata12() {
     let string = bestThing.slice(0, 14)
-    mostraNaPagina('kata12 :', string)
+    showResults('kata12 :', string)
     return string
 }
 
 function kata13() {
     let string = bestThing.slice(-12)
-    mostraNaPagina('kata13 :', string)
+    showResults('kata13 :', string)
     return string
 }
 
 function kata14() {
     let string = bestThing.slice(23, 38)
-    mostraNaPagina('kata14 :', string)
+    showResults('kata14 :', string)
     return string
 }
 
 function kata15() {
     let string = bestThing.substring(bestThing.length - 12,bestThing.length)
-    mostraNaPagina('kata15 :', string)
+    showResults('kata15 :', string)
     return string
 }
 
 function kata16() {
     let string = bestThing.substring(23,38)
-    mostraNaPagina('kata16 :', string)
+    showResults('kata16 :', string)
     return string
 }
 
 function kata17() {
     let arr = lotrCitiesArray
     arr.pop()
-    mostraNaPagina('kata17 :', arr)
+    showResults('kata17 :', arr)
     return arr
 }
 
 function kata18() {
     let arr = lotrCitiesArray
     arr.push('Harad')
-    mostraNaPagina('kata18 :', arr)
+    showResults('kata18 :', arr)
     return arr
 }
 
 function kata19() {
     let arr = lotrCitiesArray
     arr.shift()
-    mostraNaPagina('kata19 :', arr)
+    showResults('kata19 :', arr)
     return arr
 }
 
 function kata20() {
     let arr = lotrCitiesArray
     arr.unshift('Mordor')
-    mostraNaPagina('kata20 :', arr)
+    showResults('kata20 :', arr)
     return arr
 }
 
 
+
+
+kata1()
+kata2()
+kata3()
+kata4()
+kata5()
+kata6()
+kata7()
+kata8()
+kata9()
+kata10()
+kata11()
+kata12()
+kata13()
+kata14()
+kata15()
+kata16()
+kata17()
+kata18()
+kata19()
+kata20()
